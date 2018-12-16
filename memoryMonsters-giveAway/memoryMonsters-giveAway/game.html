@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>My App</title>
+  <link rel="stylesheet" href="css/game.css" />
+
+</head>
+
+<body>
+  <div class="header">
+    <img src="img/layout/logo.png">
+    <h1>Memory Monsters</h1>
+
+    <div>
+      <h5 style="margin-bottom: 5px">
+        <span>
+          Player:
+        </span>
+        <span class='player'></span>
+      </h5>
+      <div>
+        <Button onClick="switchUser()">Switch Player </Button>
+      </div>
+    </div>
+
+    <div>
+      <h3>
+        <span>Timer:</span>
+        <span id="stopwatch" class="timer"> </span>
+        <!-- <div id="stopwatch"
+         style="z-index: 2; position: relative; right: 0px; top: 10px;
+ width: 100px; padding: 10px; color: white; font-size:20px; border: #0000cc 2px dashed; ">
+        </div> -->
+      </h3>
+    </div>
+    <div>
+      <h3>
+        <span>Best time:</span>
+        <span class="bestTime"></span>
+      </h3>
+    </div>
+
+  </div>
+
+
+  <div class="board">
+    <div class="card" data-card="1" onclick="cardClicked(this)">
+      <img src="img/cards/1.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+    <div class="card" data-card="7" onclick="cardClicked(this)">
+      <img src="img/cards/7.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+    <div class="card" data-card="1" onclick="cardClicked(this)">
+      <img src="img/cards/1.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+    <div class="card" data-card="7" onclick="cardClicked(this)">
+      <img src="img/cards/7.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+    <div class="card" data-card="5" onclick="cardClicked(this)">
+      <img src="img/cards/5.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+    <div class="card" data-card="5" onclick="cardClicked(this)">
+      <img src="img/cards/5.png">
+      <img class="back" src="img/cards/back.png">
+    </div>
+  </div>
+  <script src="js/stopwatch.js"></script>
+  <script src="js/game.js"></script>
+  <br>
+  <br>
+  <div>
+
+    <button onclick="revealAll()", id='revealbutton' style="visibility:visible">Reveal</button>
+    <button onclick="revealButton()" id='revealbutton' style="visibility:hidden">Reveal</button>
+  </div>
+  <div>
+    <button onclick="hideButton()" id='hide' style="visibility:visible">Hide</button>
+  </div>
+  <button onclick="hideButton()" id='hide' style="visibility:hidden">Hide</button>
+  </div>
+
+  <a href="index.html">HOME PAGE</a>
+  <div>
+    <button onclick="resetGame()" id='resetbutton' style="visibility:hidden">PLAY AGAIN</button>
+  </div>
+</body>
+   
+</html>
